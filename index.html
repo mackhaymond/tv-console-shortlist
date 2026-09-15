@@ -1,0 +1,398 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Floating TV Console Shortlist</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg: #eeeeeb;
+    --surface: #f8f8f6;
+    --ink: #1d1c1a;
+    --ink-2: #4b4945;
+    --ink-3: #7c7973;
+    --line: #d6d5d0;
+    --accent: #6a4a2c;
+    --accent-ink: #f8f8f6;
+    --gauge-track: #dddcd6;
+    --gauge-fill: #6a4a2c;
+    --gauge-over: #b04a3a;
+    --tag-bg: #e4e0d8;
+    --tag-ink: #4d3a26;
+    --tag2-bg: #dfe3e1;
+    --tag2-ink: #364541;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17171a;
+      --surface: #202024;
+      --ink: #ecebe6;
+      --ink-2: #bdbbb4;
+      --ink-3: #85837c;
+      --line: #35353a;
+      --accent: #c99a6b;
+      --accent-ink: #17171a;
+      --gauge-track: #303035;
+      --gauge-fill: #c99a6b;
+      --gauge-over: #d8735f;
+      --tag-bg: #3a2e22;
+      --tag-ink: #e2c9ac;
+      --tag2-bg: #27302d;
+      --tag2-ink: #b6cbc4;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17171a;
+    --surface: #202024;
+    --ink: #ecebe6;
+    --ink-2: #bdbbb4;
+    --ink-3: #85837c;
+    --line: #35353a;
+    --accent: #c99a6b;
+    --accent-ink: #17171a;
+    --gauge-track: #303035;
+    --gauge-fill: #c99a6b;
+    --gauge-over: #d8735f;
+    --tag-bg: #3a2e22;
+    --tag-ink: #e2c9ac;
+    --tag2-bg: #27302d;
+    --tag2-ink: #b6cbc4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    padding-block: 40px 64px;
+    padding-inline: 20px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  header { display: grid; gap: 18px; margin-bottom: 36px; }
+  h1 {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(38px, 6vw, 60px);
+    line-height: 1.02;
+    margin: 0;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+  h1 em { font-style: italic; color: var(--accent); }
+  .lede { max-width: 62ch; color: var(--ink-2); margin: 0; font-size: 16px; }
+  .spec {
+    display: flex; flex-wrap: wrap; gap: 8px 22px;
+    padding: 12px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    font-family: "IBM Plex Mono", Menlo, monospace; font-size: 12.5px; color: var(--ink-2);
+  }
+  .spec b { color: var(--ink); font-weight: 500; }
+  .spec .k { text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; color: var(--ink-3); margin-right: 6px; }
+
+  section { margin-top: 36px; }
+  h2 {
+    font-family: "Instrument Serif", Georgia, serif; font-weight: 400;
+    font-size: 27px; margin: 0 0 4px; letter-spacing: -0.005em;
+  }
+  .sub { margin: 0 0 14px; color: var(--ink-3); font-size: 14px; max-width: 65ch; }
+
+  .list { display: grid; gap: 10px; }
+  .row {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1.4fr) 170px 88px minmax(0, 1.2fr);
+    gap: 18px; align-items: start;
+    background: var(--surface); border: 1px solid var(--line);
+    padding: 14px 18px 14px 14px;
+  }
+  .pic {
+    aspect-ratio: 1 / 1; width: 100%; max-width: 100%;
+    background: #fff; border: 1px solid var(--line);
+    display: grid; place-items: center; overflow: hidden;
+  }
+  .pic img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .row.top { border-color: var(--accent); }
+  .name { display: grid; gap: 6px; min-width: 0; }
+  .name a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 15.5px; line-height: 1.3; }
+  .name a:hover, .name a:focus-visible { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+  .name a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .tag {
+    font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 2px 7px; background: var(--tag-bg); color: var(--tag-ink);
+    font-family: "IBM Plex Mono", Menlo, monospace;
+  }
+  .tag.alt { background: var(--tag2-bg); color: var(--tag2-ink); }
+
+  .dims { font-family: "IBM Plex Mono", Menlo, monospace; font-size: 13px; font-variant-numeric: tabular-nums; display: grid; gap: 6px; }
+  .dims .wdh { color: var(--ink); }
+  .dims .wdh span { color: var(--ink-3); }
+  .gauge { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px; }
+  .gauge .track { height: 6px; background: var(--gauge-track); position: relative; }
+  .gauge .fill { position: absolute; inset: 0 auto 0 0; background: var(--gauge-fill); }
+  .gauge .fill.over { background: var(--gauge-over); }
+  .gauge .lbl { font-size: 11px; color: var(--ink-3); white-space: nowrap; }
+
+  .price { font-family: "IBM Plex Mono", Menlo, monospace; font-size: 17px; font-weight: 500; font-variant-numeric: tabular-nums; }
+  .price small { display: block; font-size: 11px; color: var(--ink-3); font-weight: 400; line-height: 1.3; margin-top: 2px; }
+  .notes { color: var(--ink-2); font-size: 13.5px; line-height: 1.45; min-width: 0; }
+  .notes .rating { font-family: "IBM Plex Mono", Menlo, monospace; font-size: 12px; color: var(--ink-3); display: block; margin-top: 3px; }
+
+  .hdr {
+    display: grid; grid-template-columns: 200px minmax(0, 1.4fr) 170px 88px minmax(0, 1.2fr);
+    gap: 18px; padding: 0 18px 6px 14px;
+    font-family: "IBM Plex Mono", Menlo, monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);
+  }
+
+  .caveats { margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--line); }
+  .caveats h2 { font-size: 24px; }
+  .caveats ul { margin: 10px 0 0; padding-left: 18px; display: grid; gap: 8px; max-width: 70ch; color: var(--ink-2); }
+  .caveats li b { color: var(--ink); font-weight: 600; }
+  footer { margin-top: 36px; color: var(--ink-3); font-size: 12.5px; font-family: "IBM Plex Mono", Menlo, monospace; }
+
+  @media (max-width: 860px) {
+    .hdr { display: none; }
+    .row { grid-template-columns: 160px 1fr 1fr; }
+    .pic { grid-row: 1 / span 3; }
+    .name { grid-column: 2 / -1; }
+    .notes { grid-column: 2 / -1; }
+  }
+  @media (max-width: 520px) {
+    .row { grid-template-columns: 1fr 1fr; }
+    .pic { grid-row: auto; grid-column: 1 / -1; max-width: 260px; }
+    .name { grid-column: 1 / -1; }
+    .notes { grid-column: 1 / -1; }
+    body { padding-inline: 16px; }
+  }
+</style>
+<style>html{color-scheme:light dark}</style></head><body>
+
+<div class="wrap">
+  <header>
+    <h1>Consoles for under a <em>floating</em> 65″ TV</h1>
+    <p class="lede">Low, shallow, and cheap. Everything here clears the height cap and the budget, and most of it has fabric drawers or takes fabric bins. Dimensions were read off each product page on Sept 14–15, 2026.</p>
+    <div class="spec">
+      <div><span class="k">Height</span><b>≤ 24″</b></div>
+      <div><span class="k">Depth</span><b>as shallow as possible</b> · gauge scale 0–18″</div>
+      <div><span class="k">Width</span><b>flexible</b> · TV is ~57″ wide</div>
+      <div><span class="k">Budget</span><b>≤ $150</b></div>
+      <div><span class="k">Drawers</span><b>fabric preferred</b></div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Fabric drawers or bins built in</h2>
+    <p class="sub">Ready to go out of the box. The first row is the best overall fit for depth, height, and width.</p>
+    <div class="hdr"><div></div><div>Product</div><div>W × D × H (in)</div><div>Price</div><div>Notes</div></div>
+    <div class="list">
+
+      <div class="row top">
+        <div class="pic"><img src="img/yatiney55.jpg" alt="YATINEY 55 inch TV stand"></div>
+        <div class="name">
+          <a href="https://www.amazon.com/dp/B0DDSZWGCP">YATINEY 55″ TV stand with fabric drawers</a>
+          <div class="tags"><span class="tag">2 fabric drawers</span><span class="tag alt">Amazon</span></div>
+        </div>
+        <div class="dims">
+          <div class="wdh">55 <span>×</span> 11.8 <span>×</span> 21.6</div>
+          <div class="gauge"><div class="track"><div class="fill" style="width:65.5%"></div></div><span class="lbl">11.8″ deep</span></div>
+        </div>
+        <div class="price">$70</div>
+        <div class="notes">Two non-woven fabric drawers plus open shelves and a built-in power outlet. Best overall geometry found. <span class="rating">4.2★ · 190 reviews</span></div>
+      </div>
+
+      <div class="row">
+        <div class="pic"><img src="img/sweetcrispy63.jpg" alt="Sweetcrispy 63 inch TV stand"></div>
+        <div class="name">
+          <a href="https://www.amazon.com/dp/B0FQV34LM6">Sweetcrispy 63″ TV stand with fabric drawers</a>
+          <div class="tags"><span class="tag">2 fabric drawers</span><span class="tag alt">Amazon</span></div>
+        </div>
+        <div class="dims">
+          <div class="wdh">63 <span>×</span> 15.75 <span>×</span> 21.65</div>
+          <div class="gauge"><div class="track"><div class="fill" style="width:87.5%"></div></div><span class="lbl">15.75″ deep</span></div>
+        </div>
+        <div class="price">$66</div>
+        <div class="notes">Best reviewed of the group, with a charging station. Deepest of the fabric-drawer stands. <span class="rating">4.5★ · 1,039 reviews</span></div>
+      </div>
+
+      <div class="row">
+        <div class="pic"><img src="img/yatiney63.jpg" alt="YATINEY 63 inch TV stand"></div>
+        <div class="name">
+          <a href="https://www.amazon.com/dp/B0H6J3L925">YATINEY 63″ TV stand</a>
+          <div class="tags"><span class="tag">2 fabric drawers</span><span class="tag alt">Amazon</span></div>
+        </div>
+        <div class="dims">
+          <div class="wdh">63 <span>×</span> 13.8 <span>×</span> 19.7</div>
+          <div class="gauge"><div class="track"><div class="fill" style="width:76.7%"></div></div><span class="lbl">13.8″ deep</span></div>
+        </div>
+        <div class="price">$60</div>
+        <div class="notes">Widest fabric-drawer option and ships with an anti-tip kit. Brand-new listing with no reviews yet. <span class="rating">no ratings</span></div>
+      </div>
+
+      <div class="row">
+        <div class="pic"><img src="img/vasicar55.jpg" alt="VASICAR 55 inch fabric dresser"></div>
+        <div class="name">
+          <a href="https://www.amazon.com/dp/B0GW8MT6XS">VASICAR 55″ wide fabric dresser</a>
+          <div class="tags"><span class="tag">5 fabric drawers</span><span class="tag alt">Amazon</span></div>
+        </div>
+        <div class="dims">
+          <div class="wdh">55.1 <span>×</span> 11.8 <span>×</span> 19.6</div>
+          <div class="gauge"><div class="track"><div class="fill" style="width:65.5%"></div></div><span class="lbl">11.8″ deep</span></div>
+        </div>
+        <div class="price">$66</div>
+        <div class="notes">Five drawers and two open cubbies on a steel frame. Printed fabric reads a bit dorm-room. <span class="rating">4.4★</span></div>
+      </div>
+
+      <div class="row">
+        <div class="pic"><img src="img/symple.jpg" alt="Symple Stuff cube bookcase with bins"></div>
+        <div class="name">
+          <a href="https://www.wayfair.com/furniture/pdp/symple-stuff-237-h-x-316-w-cube-bookcase-with-bins-sypm1366.html">Symple Stuff cube bookcase with bins, two units</a>
+          <div class="tags"><span class="tag">8 fabric bins included</span><span class="tag alt">Wayfair</span></div>
+        </div>
+        <div class="dims">
+          <div class="wdh">63.2 <span>×</span> 11.9 <span>×</span> 23.6</div>
+          <div class="gauge"><div class="track"><div class="fill" style="width:66.1%"></div></div><span class="lbl">11.9″ deep</span></div>
+        </div>
+        <div class="price">$112<small>$56 each</small></div>
+        <div class="notes">Each unit is 31.6″ wide, so buy two and set them side by side. <span class="rating">3.9★ · 2,557 reviews</span></div>
+      </div>
+
+      <div class="row">
+        <div class="pic"><img src="img/experlam.jpg" alt="EXPERLAM 8-cube organizer"></div>
+        <div class="name">
+          <a href="https://www.amazon.com/dp/B0DFXS9X72">EXPERLAM 8-cube organizer with 4 bins</a>
+          <div class="tags"><span class="tag">4 fabric bins included</span><span class="tag alt">Amazon</span></div>
+        </div>
+        <div class="dims">
+          <div class="wdh">47.2 <span>×</span> 11.8 <span>×</span> 24.0</div>
+          <div class="gauge"><div class="track"><div class="fill" style="width:65.5%"></div></div><span class="lbl">11.8″ deep</span></div>
+        </div>
+        <div class="price">$100</div>
+        <div class="notes">Solid wood frame, mounts horizontal or vertical. Sits exactly at the 24″ cap and reads narrow under a 65″. <span class="rating">4.6★ · 314 reviews</span></div>
+      </div>
+
+      <div class="row">
+        <div class="pic"><img src="img/kallax.jpg" alt="IKEA KALLAX 1 by 4 shelf unit"></div>
+        <div class="name">
+          <a href="https://www.ikea.com/us/en/p/kallax-shelf-unit-white-40631638/">IKEA KALLAX 1×4 on its side, plus 4 DRÖNA boxes</a>
+          <div class="tags"><span class="tag">4 fabric boxes</span><span class="tag alt">IKEA</span></div>
+        </div>
+        <div class="dims">
+          <div class="wdh">57.6 <span>×</span> 15.4 <span>×</span> 16.4</div>
+          <div class="gauge"><div class="track"><div class="fill" style="width:85.4%"></div></div><span class="lbl">15.4″ deep</span></div>
+        </div>
+        <div class="price">$80<small>$60 + 4 × $5</small></div>
+        <div class="notes">Only 16″ tall, so it reads as a long low plinth. Sold as a vertical unit; anchor it to the wall. <span class="rating">4.7★ · 4,021 reviews</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Frames that take fabric bins</h2>
+    <p class="sub">Bins sold separately, roughly $5–12 each. These look more like furniture, or cost less, than the built-in options. Check the cube size before ordering bins: 11″ and 13″ bins are not interchangeable.</p>
+    <div class="hdr"><div></div><div>Product</div><div>W × D × H (in)</div><div>Price</div><div>Notes</div></div>
+    <div class="list">
+
+      <div class="row">
+        <div class="pic"><img src="img/ironmix.jpg" alt="IRONMIX steel 6-cube console"></div>
+        <div class="name">
+          <a href="https://www.amazon.com/dp/B0GCMDT68S">IRONMIX steel 6-cube console</a>
+          <div class="tags"><span class="tag">11″ bins</span><span class="tag alt">Amazon</span></div>
+        </div>
+        <div class="dims">
+          <div class="wdh">54.1 <span>×</span> 11.8 <span>×</span> 21.7</div>
+          <div class="gauge"><div class="track"><div class="fill" style="width:65.5%"></div></div><span class="lbl">11.8″ deep</span></div>
+        </div>
+        <div class="price">$106<small>+ bins</small></div>
+        <div class="notes">All-steel, powder-coated, no visible screws. Reads as a credenza rather than a dorm cube. Anti-tip and adjustable feet. <span class="rating">new listing</span></div>
+      </div>
+
+      <div class="row">
+        <div class="pic"><img src="img/mainstays.jpg" alt="Mainstays 8-cube organizer"></div>
+        <div class="name">
+          <a href="https://www.walmart.com/ip/Mainstays-11-8-Cube-Storage-Organizer-Spring-Pine/5389805077">Mainstays 8-cube organizer, laid horizontal</a>
+          <div class="tags"><span class="tag">11″ bins</span><span class="tag alt">Walmart</span></div>
+        </div>
+        <div class="dims">
+          <div class="wdh">47 <span>×</span> 11.7 <span>×</span> 23.7</div>
+          <div class="gauge"><div class="track"><div class="fill" style="width:65%"></div></div><span class="lbl">11.7″ deep</span></div>
+        </div>
+        <div class="price">$40<small>+ $20 per 4 bins</small></div>
+        <div class="notes">Cheapest route to a fabric-bin console. Only the Spring Pine finish is in stock right now. <span class="rating">4.5★ · 2,114 reviews</span></div>
+      </div>
+
+      <div class="row">
+        <div class="pic"><img src="img/bhg3cube.jpg" alt="Better Homes and Gardens 3-cube organizer"></div>
+        <div class="name">
+          <a href="https://www.walmart.com/ip/Better-Homes-Gardens-3-Cube-Storage-Organizer-Charcoal/5271867199">Better Homes &amp; Gardens 3-cube organizer, laid horizontal</a>
+          <div class="tags"><span class="tag">13″ bins</span><span class="tag alt">Walmart</span></div>
+        </div>
+        <div class="dims">
+          <div class="wdh">43.4 <span>×</span> 15.4 <span>×</span> 16.4</div>
+          <div class="gauge"><div class="track"><div class="fill" style="width:85.4%"></div></div><span class="lbl">15.4″ deep</span></div>
+        </div>
+        <div class="price">$42<small>+ bins</small></div>
+        <div class="notes">Lowest profile on the page at 16″ tall, in six finishes. Narrow under a 65″. <span class="rating">4.6★ · 1,564 reviews</span></div>
+      </div>
+
+      <div class="row">
+        <div class="pic"><img src="img/ashwood.jpg" alt="Household Essentials Ashwood and Iron cube console"></div>
+        <div class="name">
+          <a href="https://www.amazon.com/dp/B073QY97D2">Household Essentials Ashwood &amp; Iron cube console</a>
+          <div class="tags"><span class="tag">4 cubbies</span><span class="tag alt">Amazon</span></div>
+        </div>
+        <div class="dims">
+          <div class="wdh">42.7 <span>×</span> 13.8 <span>×</span> 19.1</div>
+          <div class="gauge"><div class="track"><div class="fill" style="width:76.7%"></div></div><span class="lbl">13.8″ deep</span></div>
+        </div>
+        <div class="price">$69<small>+ bins</small></div>
+        <div class="notes">Iron frame with wood shelves. The most furniture-like budget piece, but narrow. <span class="rating">4.6★</span></div>
+      </div>
+
+      <div class="row">
+        <div class="pic"><img src="img/latituderun-bench.jpg" alt="Latitude Run storage bench with cushion"></div>
+        <div class="name">
+          <a href="https://www.wayfair.com/storage-organization/pdp/latitude-run-shoe-storage-bench-with-cushion-entryway-storage-bench-organizer-cabinet-long-cubby-rack-for-living-room-bedroom-entryway-w114034205.html">Latitude Run storage bench with cushion</a>
+          <div class="tags"><span class="tag">upholstered top</span><span class="tag alt">Wayfair</span></div>
+        </div>
+        <div class="dims">
+          <div class="wdh">59 <span>×</span> 11.8 <span>×</span> 23.6</div>
+          <div class="gauge"><div class="track"><div class="fill" style="width:65.5%"></div></div><span class="lbl">11.8″ deep</span></div>
+        </div>
+        <div class="price">$146</div>
+        <div class="notes">Open cubbies under a fabric cushion. Best width match to the TV of anything under budget. <span class="rating">4.5★ · 92 reviews</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Non-fabric fallback</h2>
+    <p class="sub">If the fabric requirement is soft, this is the cleanest-looking shallow piece under budget.</p>
+    <div class="hdr"><div></div><div>Product</div><div>W × D × H (in)</div><div>Price</div><div>Notes</div></div>
+    <div class="list">
+      <div class="row">
+        <div class="pic"><img src="img/snughome.jpg" alt="Snughome 55 inch floating TV stand"></div>
+        <div class="name">
+          <a href="https://www.amazon.com/dp/B0GHYJ4TDC">Snughome 55″ floating TV stand</a>
+          <div class="tags"><span class="tag">tambour doors</span><span class="tag">wall-mounted</span><span class="tag alt">Amazon</span></div>
+        </div>
+        <div class="dims">
+          <div class="wdh">55.1 <span>×</span> 11.8 <span>×</span> 8.7</div>
+          <div class="gauge"><div class="track"><div class="fill" style="width:65.5%"></div></div><span class="lbl">11.8″ deep</span></div>
+        </div>
+        <div class="price">$87</div>
+        <div class="notes">Fluted sliding doors on both sides, open shelf in the middle. Needs studs. <span class="rating">4.7★</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="caveats">
+    <h2>Worth knowing</h2>
+    <ul>
+      <li><b>Height is the real filter.</b> Only 11″ cube units and single-row drawer stands clear 24″. Every 13″ cube horizontal and every two-row fabric dresser lands at 26″ or taller, and so does nearly every design-brand shallow console.</li>
+      <li><b>Two near misses.</b> The Latitude Run Dessein console at 70.7 × 13.7 × 11.7 has the best geometry found anywhere but costs $190. The Nicehill 5-drawer at 39 × 12 × 24 has the best fabric quality but is out of stock.</li>
+      <li><b>Not covered.</b> Home Depot and Lowe's blocked every product page. Costco and Crate &amp; Barrel had nothing under $150.</li>
+      <li><b>Bin sizes.</b> IRONMIX, Mainstays, and ClosetMaid-style units take 11″ bins. Better Homes &amp; Gardens and Target Brightroom 13″ units take 13″ bins.</li>
+    </ul>
+  </div>
+
+  <footer>Prices are USD, ship-to Los Angeles, captured Sept 14–15, 2026. Several Amazon prices were flagged as limited-time deals.</footer>
+</div>
+</body></html>
